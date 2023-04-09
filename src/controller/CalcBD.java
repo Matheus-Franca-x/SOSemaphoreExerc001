@@ -27,20 +27,8 @@ public class CalcBD extends Thread
 	
 	public void iniBD()
 	{
-		if(id % 3 == 1)
-		{
-			calc(1);
-		}
-		else if(id % 3 == 2)
-		{
-			calc(2);
-		}
-		else
-		{
-			calc(0);
-		}
+		calc(id % 3);
 	}
-	
 	public void calc(int tipo)
 	{
 		try {
