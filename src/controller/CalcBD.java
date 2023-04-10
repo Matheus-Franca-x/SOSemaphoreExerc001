@@ -68,22 +68,18 @@ public class CalcBD extends Thread
 	public void BD(int tipo)
 	{
 		try {
+			fila.acquire();
+			System.out.println("O id " + this.id + " do tipo " + tipo + " esta fazendo transacao no BD");
 			if(tipo == 1)
 			{
-				fila.acquire();
-				System.out.println("O id " + this.id + " do tipo " + tipo + " esta fazendo transacao no BD");
 				sleep(1000);			
 			}
 			else if(tipo == 2)
-			{
-				fila.acquire();
-				System.out.println("O id " + this.id + " do tipo " + tipo + " esta fazendo transacao no BD");
+			{	
 				sleep(1500);
 			}
 			else
 			{
-				fila.acquire();
-				System.out.println("O id " + this.id + " do tipo " + tipo + " esta fazendo transacao no BD");
 				sleep(1500);
 			}
 		} catch (InterruptedException e) {
